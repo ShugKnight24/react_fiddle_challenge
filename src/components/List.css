@@ -1,3 +1,25 @@
+.SelectedList {
+  margin: 16px;
+  padding: 16px;
+  background-color: #f8f8f8;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.SelectedList h2 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.SelectedList p {
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+}
+
 .List {
   margin: 16px;
   display: grid;
