@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { ListItem } from './ListItem';
 
 import './List.css';
 
 // Implement a feature to allow item selection with the following requirements:
 // ~~1. Clicking an item selects/unselects it.~~
 // ~~2. Multiple items can be selected at a time.~~
-// 3. Make sure to avoid unnecessary re-renders of each list item in the big list (performance).
+// ~~3. Make sure to avoid unnecessary re-renders of each list item in the big list (performance).~~
 // 4. Currently selected items should be visually highlighted.
 // 5. Currently selected items' names should be shown at the top of the page.
 //
@@ -22,19 +23,15 @@ export const List = ({ items }) => {
     }
   }
 
-  console.log("these are selected", selectedItems);
-
   return (
     <>
       <ul className="List">
         {items.map(item => (
-          <li
+          <ListItem
             key={item.name}
-            className={`List__item List__item--${item.color}`}
-            onClick={() => handleListItemClick(item)}
-          >
-            {item.name}
-          </li>
+            item={item}
+            handleListItemClick={handleListItemClick}
+          />
         ))}
       </ul>
     </>
