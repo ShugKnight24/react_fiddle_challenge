@@ -1,14 +1,11 @@
-import { useState } from 'react'
-import './App.css'
+import { List } from './components/List'
+import { items } from './data/listData'
 
-function App() {
+export const App = () => {
 
   return (
     <>
-      <h1>React App</h1>
-      <p>'Ello World</p>
+      <List items={items} />
     </>
-  )
+  );
 }
-
-export default App
